@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クライアント_ログインページ</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="./css/global_style/global_style.css">
+    <!-- global stylesEnd -->
+
+    <!-- Components -->
+    <link rel="stylesheet" href="./css/components/components.css">
+    <!-- ComponentsEnd -->
+    <!-- forms-->
+    <link rel="stylesheet" href="./css/forms/forms.css">
+    <!-- forms End-->
+
+
+    <style>
+        #contact_section {
+            background: var(--text-5b);
+            color: var(--text-white);
+            padding-top: 7.4rem;
+            padding-bottom: 7.9rem;
+        }
+
+        @media (max-width: 1199px) {
+            #contact_section {
+                padding-top: 4rem;
+                padding-bottom: 4rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- .................................Header............................. -->
+    <header>
+        <div class="section_container container_left_helper">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-xl navbar-light">
+                <!-- Container wrapper -->
+                <div class="container-fluid px-0">
+                    <!-- Toggle button -->
+                    <div class="d-flex d-xl-none py-4 pe-3 justify-content-between w-100">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand" href="#">
+                            <img class="logo_img" src="./img/logo.png" alt="img">
+                        </a>
+
+                        <button class="navbar-toggler" onclick="this.children[0].classList.toggle('fa-times')"
+                            type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars fa-2x"></i>
+
+                        </button>
+                    </div>
+
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand d-none d-xl-block mt-0 pt-0 mt-xl-0" href="#">
+                            <img class="logo_img" src="./img/logo.png" alt="img">
+                        </a>
+                        <!-- Left links -->
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar_list align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link text-center" href="#">TOP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-center" href="#">Company</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-center" href="#">News</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-center" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-center btn_nav_item mx-auto" href="#">MEMBER</a>
+                            </li>
+                        </ul>
+                        <!-- Left links -->
+                    </div>
+                    <!-- Collapsible wrapper -->
+                </div>
+                <!-- Container wrapper -->
+            </nav>
+            <!-- Navbar -->
+        </div>
+    </header>
+    <!-- .................................Header.............................End -->
+
+    <!-- .................................Main.................................. -->
+    <main>
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="section_title section_title_mb title_padding title_border_bottom">
+                    <h1 class="text_primary title_mb">
+                        For CLIANT
+                    </h1>
+                    <h5 class="text_48">
+                        クライアント専用ページ
+                    </h5>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+                <form action="" method="post" class="">
+                    <h3 class="form_title text-center title_mb text_primary size_2 font-weight-bold">
+                        企業様ログイン
+                    </h3>
+                    <div class="form_container form_mx_container mb_lg">
+                        <div class="form-group">
+                            <label for="" class="form-label">企業コード</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="" class="form-label">パスワード</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form_control_action text-center">
+                            <button class="btn_be_action sm_size action_mt">
+                                ログイン
+                            </button>
+                        </div>
+
+                        <div class="form_control_helper text-center">
+                            <a href="#" class="d-block text_f7">→企業コードを忘れた</a>
+                            <a href="#" class="d-block text_f7">→パスワードを忘れた</a>
+                        </div>
+
+
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+        <section id="contact_section">
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="row justify-content-center section_title_content">
+                    <div class="col-md-10">
+                        <h3>
+                            ココロとカラダの健康を支えるためにはじめてみましょう。
+                        </h3>
+                        <div class="content text-center">
+                            <a href="#" class="btn_light">
+                                <img src="./img/mail_icon.png" alt=""> Contact
+                            </a>
+
+                            <h2>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="29.447" height="29.447"
+                                    viewBox="0 0 29.447 29.447">
+                                    <path id="Icon_awesome-phone-alt" data-name="Icon awesome-phone-alt"
+                                        d="M28.607,20.809l-6.442-2.761a1.38,1.38,0,0,0-1.61.4L17.7,21.93A21.318,21.318,0,0,1,7.511,11.739L11,8.887a1.377,1.377,0,0,0,.4-1.61L8.633.835a1.39,1.39,0,0,0-1.582-.8L1.07,1.416A1.38,1.38,0,0,0,0,2.761,26.684,26.684,0,0,0,26.687,29.447a1.38,1.38,0,0,0,1.346-1.07l1.38-5.981a1.4,1.4,0,0,0-.806-1.587Z"
+                                        transform="translate(0 0)" fill="#fff" />
+                                </svg>
+                                000-000-0000
+                            </h2>
+
+                            <p>
+                                平日 &nbsp; &nbsp; 10:00〜17:00
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- .................................Main..................................End -->
+
+
+    <!-- .................................Footer.................................. -->
+    <footer>
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="row gy-3 gx-0">
+                    <div class="col-md-6">
+                        <img class="light_logo logo_img" src="./img/light_logo.png" alt="">
+
+                        <p class="paragraph">
+                            〒151-0064 東京都渋谷区上原1-3-9 YYビル2階 <br>
+                            TEL：000-000-0000　FAX：000-000-0000 <br>
+                            E-mail：＊＊＊＊＊＊＊＊＊＊＊＊＊
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="list-unstyled footer_nav_list">
+                            <li>
+                                <a href="#" class="nav_link">TOP</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav_link">Company</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav_link">News</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="nav_link">Contact</a>
+                            </li>
+
+
+                            <li>
+                                <a href="#" class="nav_link">MEMBER</a>
+                            </li>
+
+                            <li class="w-100">
+                                <a href="#" class="nav_link">PRIVACY POLICY</a>
+                            </li>
+
+                        </ul>
+
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="footer_copyright text-center">
+                            Copyright © WellPedia All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- .................................Footer.................................. End-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+</body>
+
+</html>

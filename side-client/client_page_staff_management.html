@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クライアントページ_スタッフ管理</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="./css/global_style/global_style.css">
+    <!-- global stylesEnd -->
+
+    <!-- Components -->
+    <link rel="stylesheet" href="./css/components/components.css">
+    <!-- ComponentsEnd -->
+    <!-- forms-->
+    <link rel="stylesheet" href="./css/forms/forms.css">
+    <!-- forms End-->
+</head>
+
+<body>
+    <!-- .................................Header............................. -->
+    <header>
+        <div class="section_container container_left_helper">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-xl navbar-light">
+                <!-- Container wrapper -->
+                <div class="container-fluid px-0">
+                    <!-- Toggle button -->
+                    <div class="d-flex d-xl-none py-4 pe-3 justify-content-between w-100">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand" href="#">
+                            <img class="logo_img" src="./img/logo.png" alt="img">
+                        </a>
+
+                        <button class="navbar-toggler" onclick="this.children[0].classList.toggle('fa-times')"
+                            type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars fa-2x"></i>
+
+                        </button>
+                    </div>
+
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand d-none d-xl-block mt-0 pt-0 mt-xl-0" href="#">
+                            <img class="logo_img" src="./img/logo.png" alt="img">
+                        </a>
+                        <!-- Left links -->
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar_list navbar_admin_login">
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">動画管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">コンテンツ管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">スタッフ管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">クライアント管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">ユーザー管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link   text-center btn_be_action lg_size font-weight-bold justify-content-center action_light h-100 d-flex align-items-center mx-auto"
+                                    href="#">
+                                    <svg style="margin-right: .7rem" xmlns="http://www.w3.org/2000/svg" width="20.571"
+                                        height="18" viewBox="0 0 20.571 18">
+                                        <path id="Icon_open-account-logout" data-name="Icon open-account-logout"
+                                            d="M7.714,0V2.571H18V15.429H7.714V18H20.571V0ZM5.143,5.143,0,9l5.143,3.857V10.286H15.429V7.714H5.143Z" />
+                                    </svg>
+
+                                    ログアウト</a>
+                            </li>
+                        </ul>
+                        <!-- Left links -->
+                    </div>
+                    <!-- Collapsible wrapper -->
+                </div>
+                <!-- Container wrapper -->
+            </nav>
+            <!-- Navbar -->
+        </div>
+    </header>
+    <!-- .................................Header.............................End -->
+
+    <!-- .................................Main.................................. -->
+    <main>
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="section_title section_title_sub section_title_mb title_padding ">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3>
+                            検索条件
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="section_body">
+                    <div class="form_container">
+                        <div class="row gx-3 gy-4 mb-3">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="col_wrapper">
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn_light_3 me-3">
+                                            条件1
+                                        </button>
+                                        <div class="form-group position-relative w-100 mb-0">
+                                            <select name="" id="`" class="form-control w-100 h_40_sizer">
+                                                <option value="年">選択してくだい</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                            <svg class="select_icon position-absolute"
+                                                style="top: 50%; transform: translateY(-50%); right: .8rem"
+                                                xmlns="http://www.w3.org/2000/svg" width="8.781" height="6.12"
+                                                viewBox="0 0 8.781 6.12">
+                                                <path id="Path_137" data-name="Path 137"
+                                                    d="M7219.936,610.665l4.155,5,3.845-5"
+                                                    transform="translate(-7219.551 -610.345)" fill="none"
+                                                    stroke="#0d0101" stroke-width="1" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 col-lg-4">
+                                <div class="col_wrapper">
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn_light_3 me-3">
+                                            条件1
+                                        </button>
+                                        <div class="form-group position-relative w-100 mb-0">
+                                            <select name="" id="`" class="form-control w-100 h_40_sizer">
+                                                <option value="年">選択してくだい</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                            <svg class="select_icon position-absolute"
+                                                style="top: 50%; transform: translateY(-50%); right: .8rem"
+                                                xmlns="http://www.w3.org/2000/svg" width="8.781" height="6.12"
+                                                viewBox="0 0 8.781 6.12">
+                                                <path id="Path_137" data-name="Path 137"
+                                                    d="M7219.936,610.665l4.155,5,3.845-5"
+                                                    transform="translate(-7219.551 -610.345)" fill="none"
+                                                    stroke="#0d0101" stroke-width="1" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="col_wrapper">
+                                    <div class="d-flex align-items-center">
+                                        <button class="btn_light_3 me-3">
+                                            条件1
+                                        </button>
+                                        <div class="form-group position-relative w-100 mb-0">
+                                            <select name="" id="`" class="form-control w-100 h_40_sizer">
+                                                <option value="年">選択してくだい</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                            <svg class="select_icon position-absolute"
+                                                style="top: 50%; transform: translateY(-50%); right: .8rem"
+                                                xmlns="http://www.w3.org/2000/svg" width="8.781" height="6.12"
+                                                viewBox="0 0 8.781 6.12">
+                                                <path id="Path_137" data-name="Path 137"
+                                                    d="M7219.936,610.665l4.155,5,3.845-5"
+                                                    transform="translate(-7219.551 -610.345)" fill="none"
+                                                    stroke="#0d0101" stroke-width="1" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="d-flex flex-wrap flex-sm-nowrap align-items-center">
+                                    <div class="form-group w-100 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control w-100 h_40_sizer">
+                                    </div>
+
+                                    <button class="btn_be_action client_action_light sm_size ms-0 ms-sm-3">
+                                        企業ロゴ
+                                    </button>
+                                    <button class="btn_be_action client_action_primary sm_size ms-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17.999" height="18.002"
+                                            viewBox="0 0 17.999 18.002">
+                                            <path id="Icon_awesome-search" data-name="Icon awesome-search"
+                                                d="M17.754,15.564l-3.505-3.505a.843.843,0,0,0-.6-.246h-.573a7.309,7.309,0,1,0-1.266,1.266v.573a.843.843,0,0,0,.246.6l3.505,3.505a.84.84,0,0,0,1.192,0l.995-.995a.848.848,0,0,0,0-1.2ZM7.313,11.813a4.5,4.5,0,1,1,4.5-4.5A4.5,4.5,0,0,1,7.313,11.813Z"
+                                                fill="#fff" />
+                                        </svg> 検索
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="csv_content_wrapper">
+                <div class="section_container container_left_helper container_right_helper">
+                    <div class="section_title section_title_sub  title_padding ">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h3 class="mb-0">
+                                CSVインポート
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="section_body">
+                        <div class="csv_upload_wrapper d-flex align-items-center flex-wrap">
+                            <h5 class="default_16 family_yugothib">
+                                CSVファイル
+                            </h5>
+                            <div class="uploader">
+                                <button class="csv_uploader_btn">
+                                    <label for="csv_input_upload" class="w-100 h-100">ファイルを選択</label>
+                                </button>
+                                <input onchange="csvUploaderFunc(this)" class="d-none" type="file"
+                                    name="csv_input_upload" accept=".csv" id="csv_input_upload">
+                            </div>
+                            <h5 class="csv_uploader_output">
+                                Sample.csv（ファイル名）
+                            </h5>
+                            <script>
+                                function csvUploaderFunc(val) {
+                                    document.querySelector('.csv_uploader_output').innerHTML = val.value;
+                                }
+                            </script>
+                        </div>
+                        <div class="csv_content_wrapper">
+                            <div class="content_title">
+                                <h3 class="size_2 mb-0">
+                                    CSVデータを指定したカテゴリーにインポートまたは上書きします。
+                                </h3>
+                            </div>
+                            <div class="content_body">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        ・CSV形式のファイル（カンマ区切りデータ）をエントリーと、エントリーのカスタムフィールドに変換してインポートします。
+                                    </li>
+                                    <li>
+                                        ・CSVファイルに、カスタムフィールドの情報のみが含まれる場合は、エントリー情報は自動で作成されます。
+                                    </li>
+                                    <li>
+                                        ・CSVにidをしているすことで既存のエントリーに上書きすることができます。
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="content_footer">
+                                <button class="btn_primary min_sizer">
+                                    インポートを実行する
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="section_title section_title_sub title_padding ">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="mb-0">
+                            スタッフ登録情報一覧
+                        </h3>
+                    </div>
+                </div>
+                <div class="section_body">
+                    <div class="staff_list_table_wrapper">
+                        <div class="table_header_wrapper">
+                            <div class="row gy-3 gy-lg-0">
+                                <div class="col-lg-6">
+                                    <div class="col_wrapper">
+                                        <div class="form_container d-flex flex-wrap flex-sm-nowrap  align-items-center">
+                                            <button class="btn_be_action mb-3 mb-sm-0 text-nowrap action_orange mr_3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="Group_196" data-name="Group 196"
+                                                        transform="translate(-191 -369)">
+                                                        <circle id="Ellipse_7" data-name="Ellipse 7" cx="8" cy="8" r="8"
+                                                            transform="translate(191 369)" fill="#fff" />
+                                                        <path id="Icon_awesome-plus" data-name="Icon awesome-plus"
+                                                            d="M7.429,5.393H4.857V2.821a.571.571,0,0,0-.571-.571H3.714a.571.571,0,0,0-.571.571V5.393H.571A.571.571,0,0,0,0,5.964v.571a.571.571,0,0,0,.571.571H3.143V9.679a.571.571,0,0,0,.571.571h.571a.571.571,0,0,0,.571-.571V7.107H7.429A.571.571,0,0,0,8,6.536V5.964A.571.571,0,0,0,7.429,5.393Z"
+                                                            transform="translate(195 370.75)" fill="#ff771e" />
+                                                    </g>
+                                                </svg>
+                                                登録
+                                            </button>
+                                            <h5
+                                                class="default_16 text-nowrap mb-3 mb-sm-0 font-weight-bold yugothibu me-4">
+                                                選択行の
+                                            </h5>
+
+                                            <div class="form-group position-relative w-100 mb-3 mb-sm-0">
+                                                <select name="" id="`" class="form-control w-100 h_40_sizer">
+                                                    <option value="年">選択してくだい</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                                <svg class="select_icon position-absolute"
+                                                    style="top: 50%; transform: translateY(-50%); right: .8rem"
+                                                    xmlns="http://www.w3.org/2000/svg" width="8.781" height="6.12"
+                                                    viewBox="0 0 8.781 6.12">
+                                                    <path id="Path_137" data-name="Path 137"
+                                                        d="M7219.936,610.665l4.155,5,3.845-5"
+                                                        transform="translate(-7219.551 -610.345)" fill="none"
+                                                        stroke="#0d0101" stroke-width="1" />
+                                                </svg>
+                                            </div>
+
+                                            <button class="btn_be_action action_primary mb-3 mb-sm-0 text-nowrap ml_6">
+                                                登録
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="col_wrapper">
+                                        <div class="pagination_wrapper">
+                                            <ul
+                                                class="pagination_list list-unstyled d-flex flex-wrap justify-content-end">
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fas fa-angle-left    "></i>
+                                                    </a>
+                                                </li>
+                                                <li style="background: var(--text-e2)">
+                                                    <a href="#">1</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">3</a>
+                                                </li>
+
+                                                <li class="list_dots">
+                                                    ...
+                                                </li>
+                                                <li>
+                                                    <a href="#">10</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <i class="fas fa-angle-right    "></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table_body_wrapper">
+                            <div class="table-responsive">
+                                <table class="table staff_table">
+                                    <thead>
+                                        <tr class="rows_1">
+                                            <th rowspan="2">
+
+                                            </th>
+                                            <th rowspan="2">
+                                                <input checked type="checkbox" name="" id="">
+                                            </th>
+                                            <th rowspan="2">
+                                                ポイント
+                                            </th>
+                                            <th colspan="2">
+                                                スタッフ情報
+                                            </th>
+                                            <th rowspan="2">
+                                                登録状態
+                                            </th>
+                                            <th colspan="2">
+                                                所属
+                                            </th>
+                                            <th rowspan="2">
+                                                最終ログイン
+                                            </th>
+                                        </tr>
+
+                                        <tr class="rows_2">
+                                            <th>
+                                                社員番号
+                                            </th>
+                                            <th>
+                                                名前
+                                            </th>
+                                            <th>
+                                                社名
+                                            </th>
+                                            <th>
+                                                部署
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>16</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>17</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>19</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="opacity: 0"></td>
+                                            <td style="opacity: 0">
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td style="opacity: 0">
+                                                000
+                                            </td>
+                                            <td style="opacity: 0">
+                                                00000000
+                                            </td>
+                                            <td style="opacity: 0">
+                                                山田 太郎
+                                            </td>
+                                            <td style="opacity: 0">
+                                                未完了
+                                            </td>
+                                            <td style="opacity: 0" class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td style="opacity: 0">
+                                                営業部
+                                            </td>
+                                            <td style="opacity: 0">
+                                                2022/02/17 9:00
+                                            </td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>48</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>49</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+
+
+                                        <tr>
+                                            <td>50</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                000
+                                            </td>
+                                            <td>
+                                                00000000
+                                            </td>
+                                            <td>
+                                                山田 太郎
+                                            </td>
+                                            <td>
+                                                未完了
+                                            </td>
+                                            <td class="text-start pl_min">
+                                                株式会社
+                                            </td>
+                                            <td>営業部</td>
+                                            <td class="date_col">2022/02/17 9:00</td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <div class="pagination_wrapper mb_page_foot">
+                                <ul class="pagination_list list-unstyled d-flex flex-wrap justify-content-end ">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-angle-left    "></i>
+                                        </a>
+                                    </li>
+                                    <li style="background: var(--text-e2)">
+                                        <a href="#">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">3</a>
+                                    </li>
+
+                                    <li class="list_dots">
+                                        ...
+                                    </li>
+                                    <li>
+                                        <a href="#">10</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-angle-right    "></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- .................................Main..................................End -->
+
+
+    <!-- .................................Footer.................................. -->
+    <footer>
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img class="light_logo logo_img" src="./img/light_logo.png" alt="">
+
+                        <p class="paragraph" style="margin-bottom: 3.2rem">
+                            〒151-0064 東京都渋谷区上原1-3-9 YYビル2階
+                        </p>
+                        <p class="paragraph">
+                            お問い合わせ
+                        </p>
+                        <p class="paragraph">
+                            運営会社
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="footer_copyright mt_sm text-center">
+                            Copyright © WellPedia All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- .................................Footer.................................. End-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+</body>
+
+</html>

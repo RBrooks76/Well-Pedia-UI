@@ -1,0 +1,7 @@
+fonts...........
+
+Trebuchet MS ...bold
+
+YuGothic ..... bold, medium
+
+Segoe UI ...... regular

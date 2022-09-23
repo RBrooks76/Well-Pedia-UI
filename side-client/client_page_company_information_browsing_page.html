@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クライアントページ_企業情報閲覧ページ</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="./css/global_style/global_style.css">
+    <!-- global stylesEnd -->
+
+    <!-- Components -->
+    <link rel="stylesheet" href="./css/components/components.css">
+    <!-- ComponentsEnd -->
+    <!-- forms-->
+    <link rel="stylesheet" href="./css/forms/forms.css">
+    <!-- forms End-->
+</head>
+
+<body>
+    <!-- .................................Header............................. -->
+    <header>
+        <div class="section_container container_left_helper">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-xl navbar-light">
+                <!-- Container wrapper -->
+                <div class="container-fluid px-0">
+                    <!-- Toggle button -->
+                    <div class="d-flex d-xl-none py-4 pe-3 justify-content-between w-100">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand" href="#">
+                            <img class="logo_img" src="./img/logo.png" alt="img">
+                        </a>
+
+                        <button class="navbar-toggler" onclick="this.children[0].classList.toggle('fa-times')"
+                            type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars fa-2x"></i>
+
+                        </button>
+                    </div>
+
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand d-none d-xl-block mt-0 pt-0 mt-xl-0" href="#">
+                            <img class="logo_img" src="./img/logo.png" alt="img">
+                        </a>
+                        <!-- Left links -->
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar_list">
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">マイページ</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">メニュー</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">コンセプト</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link   text-center btn_be_action lg_size font-weight-bold justify-content-center action_light h-100 d-flex align-items-center mx-auto"
+                                    href="#">
+                                    <svg style="margin-right: .7rem" xmlns="http://www.w3.org/2000/svg" width="20.571"
+                                        height="18" viewBox="0 0 20.571 18">
+                                        <path id="Icon_open-account-logout" data-name="Icon open-account-logout"
+                                            d="M7.714,0V2.571H18V15.429H7.714V18H20.571V0ZM5.143,5.143,0,9l5.143,3.857V10.286H15.429V7.714H5.143Z" />
+                                    </svg>
+
+                                    ログアウト</a>
+                            </li>
+                        </ul>
+                        <!-- Left links -->
+                    </div>
+                    <!-- Collapsible wrapper -->
+                </div>
+                <!-- Container wrapper -->
+            </nav>
+            <!-- Navbar -->
+        </div>
+
+        <!-- beneath -->
+        <div class="header_beneath_section">
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="d-flex flex-wrap justify-content-between align-items-center">
+                    <div class="box me-3 ps-0">
+                        <button class="btn_light_gray">
+                            企業ロゴ
+                        </button>
+                    </div>
+                    <div class="box family_yugothib pe-0">
+                        <span class="text_primary font-weight-bold">企業コード：00000000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- beneath End-->
+    </header>
+    <!-- .................................Header.............................End -->
+
+    <!-- .................................Main.................................. -->
+    <main>
+
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="section_title section_title_sub section_title_mb title_padding title_border_bottom">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="text_primary title_mb text_primary">
+                            基本情報編集
+                        </h3>
+                        <div class="form_control_action text-center">
+                            <button class="btn_dark  shadow-0 border-0">
+                                更新する
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <form action="" method="post" class="">
+                    <div class="form_container mb_lg table-responsive  pb-1">
+                        <table class="table form_table_td_sizer form_table">
+                            <tbody>
+                                <tr>
+                                    <td class="font-weight-bold text-nowrap">
+                                        企業名
+                                    </td>
+                                    <td>
+                                        株式会社◯◯◯◯
+
+                                        <span class="text_red ms-2">
+                                            ※編集不可
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="font-weight-bold text-nowrap">
+                                        企業コード
+                                    </td>
+                                    <td>
+                                        000000000
+                                        <span class="text_red ms-2">
+                                            ※編集不可
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="font-weight-bold text-nowrap">
+                                        社員番号
+                                        <span class="text_red ms-2">
+                                            ※
+                                        </span>
+                                    </td>
+                                    <td>
+                                        000000000
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td class="font-weight-bold text-nowrap">
+                                        所在地
+                                    </td>
+                                    <td>
+                                        〒151-0064 東京都渋谷区上原1-3-9 YYビル2階
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-bold text-nowrap">
+                                        ご担当者名1
+                                    </td>
+                                    <td>
+                                        山田 太郎
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="font-weight-bold text-nowrap">
+                                        ご担当者名2
+                                    </td>
+                                    <td>
+                                        山田 太郎
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="font-weight-bold text-nowrap">
+                                        ご担当者名3
+                                    </td>
+                                    <td>
+                                        山田 太郎
+                                    </td>
+
+                                </tr>
+
+
+
+
+                                <tr>
+                                    <td class="font-weight-bold text-nowrap">
+                                        パスワード
+                                    </td>
+                                    <td class="text-nowrap">
+                                        <div class="d-flex align-items-center">
+                                            ***********
+                                            <a href="#" class="text_f7 font_14 ms-1 ms-sm-5 sm_less">
+                                                →パスワードを変更する
+                                            </a>
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td class="font-weight-bold text-nowrap">
+                                        企業ロゴ
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="form_control_action text-center">
+                        <button class="btn_dark  content_mb_100 shadow-0 border-0">
+                            更新する
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+
+    </main>
+    <!-- .................................Main..................................End -->
+
+
+    <!-- .................................Footer.................................. -->
+    <footer>
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img class="light_logo logo_img" src="./img/light_logo.png" alt="">
+
+                        <p class="paragraph" style="margin-bottom: 3.2rem">
+                            〒151-0064 東京都渋谷区上原1-3-9 YYビル2階
+                        </p>
+                        <p class="paragraph">
+                            お問い合わせ
+                        </p>
+                        <p class="paragraph">
+                            運営会社
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="footer_copyright mt_sm text-center">
+                            Copyright © WellPedia All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- .................................Footer.................................. End-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+</body>
+
+</html>

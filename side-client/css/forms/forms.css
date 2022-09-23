@@ -1,0 +1,244 @@
+.form_title {
+  font-size: 2rem;
+}
+
+.form_title.mb_title {
+  margin-bottom: 2.6rem;
+}
+
+.form_subtitle {
+  font-size: 1.4rem;
+}
+
+.form_subtitle.mb_title {
+  margin-bottom: 3.5rem;
+}
+
+.form_control_helper p {
+  font-size: 1.4rem;
+  color: var(--text-01);
+}
+
+.form_container.mb_lg {
+  margin-bottom: 9.6rem;
+}
+
+@media (max-width: 600px) {
+  .form_container.mb_lg {
+    margin-bottom: 5rem;
+  }
+}
+
+.form_container.form_mx_container {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form_container .form-group {
+  margin-bottom: 2.9rem;
+}
+
+.form_container .form-group label {
+  font-size: 1.6rem;
+  color: var(--text-f1);
+  margin-bottom: 0.6rem;
+  font-weight: bold;
+  font-family: yugothib;
+}
+
+.form_container .form-group input,
+.form_container .form-group select {
+  border: 1px solid var(--text-cc) !important;
+  padding: 1.2rem 2rem;
+  font-size: 1.6rem;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: var(--text-f1);
+  border-radius: 0px;
+  font-family: yugothib;
+}
+
+@media (max-width: 600px) {
+  .form_container .form-group input,
+  .form_container .form-group select {
+    padding: 0.3rem 1rem;
+  }
+}
+
+.form_container .form-group .form-control.h_40_sizer {
+  height: 4rem;
+  padding: 0.8rem 1.2rem;
+  font-size: 1.8rem;
+}
+
+@media (max-width: 400px) {
+  .form_container .form-group .select_sm_control {
+    width: 100%;
+  }
+}
+
+.form_container .form_control_helper {
+  margin-top: 3.7rem;
+}
+
+.form_container .form_control_helper a {
+  margin-bottom: 1.1rem;
+}
+
+.form_container .form_table {
+  max-width: 48rem;
+  font-size: 1.8rem;
+  font-family: yugothib;
+}
+
+.form_container .form_table * {
+  color: var(--text-01);
+  border: none;
+  vertical-align: middle;
+}
+
+.form_container .form_table .form-group {
+  margin-bottom: 0px;
+}
+
+.form_container .form_table .form-control {
+  padding: 1.1rem;
+}
+
+@media (max-width: 600px) {
+  .form_container .form_table .form-control {
+    padding: 0.5rem 0.7rem;
+  }
+}
+
+.form_container .form_table .form-control.form_control_600 {
+  width: 60rem;
+}
+
+@media (max-width: 1199px) {
+  .form_container .form_table .form-control.form_control_600 {
+    width: 100%;
+  }
+}
+
+.form_container .form_table .w_200 {
+  width: 20rem;
+}
+
+@media (max-width: 600px) {
+  .form_container .form_table .w_200 {
+    width: 15rem;
+  }
+}
+
+.form_container .form_table .w_140 {
+  width: 14rem;
+}
+
+.form_container .form_table ::-webkit-input-placeholder,
+.form_container .form_table select {
+  color: var(--text-89);
+}
+
+.form_container .form_table :-ms-input-placeholder,
+.form_container .form_table select {
+  color: var(--text-89);
+}
+
+.form_container .form_table ::-ms-input-placeholder,
+.form_container .form_table select {
+  color: var(--text-89);
+}
+
+.form_container .form_table ::placeholder,
+.form_container .form_table select {
+  color: var(--text-89);
+}
+
+@media (min-width: 1200px) {
+  .form_container .form_table.form_table_td_sizer td:nth-child(odd) {
+    padding-right: 9.4rem !important;
+  }
+}
+
+.form_container tr td:first-child {
+  padding-left: 0px;
+  padding-right: 4.1rem;
+}
+
+@media (max-width: 600px) {
+  .form_container tr td:first-child {
+    padding-right: 0.5rem;
+  }
+}
+
+.form_container tr {
+  font-size: 1.8rem;
+  font-family: yugothib;
+}
+
+.form_container tr td {
+  border: none;
+  padding-bottom: 3.4rem;
+}
+
+@media (max-width: 600px) {
+  .form_container tr td {
+    padding: 1rem 0.5rem;
+    padding-bottom: 0.4rem;
+    font-size: 1.2rem;
+  }
+}
+
+.form_container tr td:nth-child(odd) {
+  font-weight: bold;
+}
+
+.form_container tr:last-child td {
+  padding-bottom: 0px;
+}
+
+.form_checkbox_label_group input {
+  display: none;
+}
+
+.form_checkbox_label_group label {
+  position: relative;
+  padding-left: 2.5rem;
+  cursor: pointer;
+}
+
+.form_checkbox_label_group label::before {
+  content: "";
+  position: absolute;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background: var(--text-f4);
+  display: block;
+  left: 0rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.form_checkbox_label_group label::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--text-be);
+  left: 0.5rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: none;
+}
+
+.form_checkbox_label_group input:checked + label::after {
+  display: block;
+}
+/*# sourceMappingURL=forms.css.map */

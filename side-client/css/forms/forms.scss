@@ -1,0 +1,188 @@
+// ............................form title .................
+
+.form_title {
+  font-size: 2rem;
+  &.mb_title {
+    margin-bottom: 2.6rem;
+  }
+}
+.form_subtitle {
+  font-size: 1.4rem;
+  &.mb_title {
+    margin-bottom: 3.5rem;
+  }
+}
+.form_control_helper {
+  p {
+    font-size: 1.4rem;
+    color: var(--text-01);
+  }
+}
+.form_container {
+  &.mb_lg {
+    margin-bottom: 9.6rem;
+    @media (max-width: 600px) {
+      margin-bottom: 5rem;
+    }
+  }
+  &.form_mx_container {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .form-group {
+    margin-bottom: 2.9rem;
+    label {
+      font-size: 1.6rem;
+      color: var(--text-f1);
+      margin-bottom: 0.6rem;
+      font-weight: bold;
+      font-family: yugothib;
+    }
+
+    input,
+    select {
+      border: 1px solid var(--text-cc) !important;
+      padding: 1.2rem 2rem;
+      font-size: 1.6rem;
+      outline: none;
+      box-shadow: none;
+      color: var(--text-f1);
+      border-radius: 0px;
+      font-family: yugothib;
+      @media (max-width: 600px) {
+        padding: 0.3rem 1rem;
+      }
+    }
+    .form-control.h_40_sizer {
+      height: 4rem;
+      padding: 0.8rem 1.2rem;
+      font-size: 1.8rem;
+    }
+    .select_sm_control {
+      @media (max-width: 400px) {
+        width: 100%;
+      }
+    }
+  }
+  .form_control_helper {
+    margin-top: 3.7rem;
+    a {
+      margin-bottom: 1.1rem;
+    }
+  }
+  .form_table {
+    max-width: 48rem;
+    font-size: 1.8rem;
+    font-family: yugothib;
+
+    * {
+      color: var(--text-01);
+      border: none;
+      vertical-align: middle;
+    }
+    .form-group {
+      margin-bottom: 0px;
+    }
+    .form-control {
+      padding: 1.1rem;
+      @media (max-width: 600px) {
+        padding: 0.5rem 0.7rem;
+      }
+      &.form_control_600{
+        width: 60rem;
+        @media (max-width: 1199px){
+          width: 100%;
+        }
+      }
+    }
+    .w_200 {
+      width: 20rem;
+      @media (max-width: 600px) {
+        width: 15rem;
+      }
+    }
+    .w_140 {
+      width: 14rem;
+    }
+    ::placeholder,
+    select {
+      color: var(--text-89);
+    }
+    &.form_table_td_sizer {
+      td:nth-child(odd) {
+        @media (min-width: 1200px) {
+          padding-right: 9.4rem !important;
+        }
+      }
+    }
+  }
+
+  tr td:first-child {
+    padding-left: 0px;
+    padding-right: 4.1rem;
+    @media (max-width: 600px) {
+      padding-right: 0.5rem;
+    }
+  }
+  tr {
+    font-size: 1.8rem;
+    font-family: yugothib;
+    td {
+      border: none;
+      padding-bottom: 3.4rem;
+      @media (max-width: 600px) {
+        padding: 1rem 0.5rem;
+        padding-bottom: 0.4rem;
+        font-size: 1.2rem;
+      }
+      &:nth-child(odd) {
+        font-weight: bold;
+      }
+    }
+    &:last-child {
+      td {
+        padding-bottom: 0px;
+      }
+    }
+  }
+}
+
+.form_checkbox_label_group {
+  input {
+    display: none;
+  }
+  label {
+    position: relative;
+    padding-left: 2.5rem;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1.8rem;
+      height: 1.8rem;
+      border-radius: 50%;
+      background: var(--text-f4);
+      display: block;
+      left: 0rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background: var(--text-be);
+      left: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: none;
+    }
+  }
+  input:checked + label::after {
+    display: block;
+  }
+}
+// ............................form title .................End
