@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理者_クライアント管理</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="./css/global_style/global_style.css">
+    <!-- global stylesEnd -->
+
+    <!-- Components -->
+    <link rel="stylesheet" href="./css/components/components.css">
+    <!-- ComponentsEnd -->
+    <!-- forms-->
+    <link rel="stylesheet" href="./css/forms/forms.css">
+    <!-- forms End-->
+</head>
+
+<body>
+    <!-- .................................Header............................. -->
+    <header>
+        <div class="section_container container_left_helper">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-xl navbar-light">
+                <!-- Container wrapper -->
+                <div class="container-fluid px-0">
+                    <!-- Toggle button -->
+                    <div class="d-flex d-xl-none py-4 pe-3 justify-content-between w-100">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand" href="#">
+                            <img class="logo_img" src="./img/logo.png" alt="img">
+                        </a>
+
+                        <button class="navbar-toggler" onclick="this.children[0].classList.toggle('fa-times')"
+                            type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars fa-2x"></i>
+
+                        </button>
+                    </div>
+
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand d-none d-xl-block mt-0 pt-0 mt-xl-0" href="#">
+                            <img class="logo_img" src="./img/logo.png" alt="img">
+                        </a>
+                        <!-- Left links -->
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar_list navbar_admin_login">
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">動画管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">コンテンツ管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">スタッフ管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">クライアント管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">ユーザー管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link   text-center btn_be_action lg_size font-weight-bold justify-content-center action_light h-100 d-flex align-items-center mx-auto"
+                                    href="#">
+                                    <svg style="margin-right: .7rem" xmlns="http://www.w3.org/2000/svg" width="20.571"
+                                        height="18" viewBox="0 0 20.571 18">
+                                        <path id="Icon_open-account-logout" data-name="Icon open-account-logout"
+                                            d="M7.714,0V2.571H18V15.429H7.714V18H20.571V0ZM5.143,5.143,0,9l5.143,3.857V10.286H15.429V7.714H5.143Z" />
+                                    </svg>
+
+                                    ログアウト</a>
+                            </li>
+                        </ul>
+                        <!-- Left links -->
+                    </div>
+                    <!-- Collapsible wrapper -->
+                </div>
+                <!-- Container wrapper -->
+            </nav>
+            <!-- Navbar -->
+        </div>
+    </header>
+    <!-- .................................Header.............................End -->
+
+    <!-- .................................Main.................................. -->
+    <main>
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="section_title section_title_sub title_sub_140 title_padding ">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="mb-0">
+                            管理ユーザー一覧
+                        </h3>
+                    </div>
+                </div>
+                <div class="section_body">
+                    <div class="staff_list_table_wrapper mb_foot">
+                        <div class="table_header_wrapper mb-1_4">
+                            <div class="row gy-3 gy-lg-0">
+                                <div class="col-lg-6">
+                                    <div class="col_wrapper">
+                                        <div class="form_container d-flex flex-wrap flex-sm-nowrap  align-items-center">
+                                            <button class="btn_be_action mb-3 mb-sm-0 text-nowrap action_orange mr_3">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                    viewBox="0 0 16 16">
+                                                    <g id="Group_196" data-name="Group 196"
+                                                        transform="translate(-191 -369)">
+                                                        <circle id="Ellipse_7" data-name="Ellipse 7" cx="8" cy="8" r="8"
+                                                            transform="translate(191 369)" fill="#fff" />
+                                                        <path id="Icon_awesome-plus" data-name="Icon awesome-plus"
+                                                            d="M7.429,5.393H4.857V2.821a.571.571,0,0,0-.571-.571H3.714a.571.571,0,0,0-.571.571V5.393H.571A.571.571,0,0,0,0,5.964v.571a.571.571,0,0,0,.571.571H3.143V9.679a.571.571,0,0,0,.571.571h.571a.571.571,0,0,0,.571-.571V7.107H7.429A.571.571,0,0,0,8,6.536V5.964A.571.571,0,0,0,7.429,5.393Z"
+                                                            transform="translate(195 370.75)" fill="#ff771e" />
+                                                    </g>
+                                                </svg>
+                                                登録
+                                            </button>
+                                            <h5
+                                                class="default_16 text-nowrap mb-3 mb-sm-0 font-weight-bold yugothibu me-4">
+                                                選択行の
+                                            </h5>
+
+                                            <div class="form-group position-relative w-100 mb-3 mb-sm-0">
+                                                <select name="" id="`" class="form-control w-100 h_40_sizer">
+                                                    <option value="年">選択してくだい</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                </select>
+                                                <svg class="select_icon position-absolute"
+                                                    style="top: 50%; transform: translateY(-50%); right: .8rem"
+                                                    xmlns="http://www.w3.org/2000/svg" width="8.781" height="6.12"
+                                                    viewBox="0 0 8.781 6.12">
+                                                    <path id="Path_137" data-name="Path 137"
+                                                        d="M7219.936,610.665l4.155,5,3.845-5"
+                                                        transform="translate(-7219.551 -610.345)" fill="none"
+                                                        stroke="#0d0101" stroke-width="1" />
+                                                </svg>
+                                            </div>
+
+                                            <button class="btn_be_action action_primary mb-3 mb-sm-0 text-nowrap ml_6">
+                                                実行
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>管理ユーザー登録
+                            </div>
+                        </div>
+                        <div class="table_body_wrapper">
+                            <div class="table-responsive">
+                                <table class="table staff_table no_border no_td_right_border table_td_last_p_0">
+                                    <thead>
+                                        <tr class="staff_table_sm_rows rows_resizer">
+                                            <th>
+                                            </th>
+                                            <th>
+                                                <input checked type="checkbox" name="" id="">
+                                            </th>
+                                            <th>
+                                                管理ユーザー名
+                                            </th>
+                                            <th>
+                                                メールアドレス
+                                            </th>
+                                            <th>
+
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>14</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>15</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>16</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>17</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>19</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>
+                                                <input checked type="checkbox" name="" id="">
+                                            </td>
+                                            <td>
+                                                テスト太郎
+                                            </td>
+                                            <td>
+                                                test@gmail.com
+                                            </td>
+                                            <td class="text-end">
+                                                <div class="content_right_helper">
+                                                    ×削除する
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- .................................Main..................................End -->
+
+
+    <!-- .................................Footer.................................. -->
+    <footer>
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img class="light_logo logo_img" src="./img/light_logo.png" alt="">
+
+                        <p class="paragraph" style="margin-bottom: 3.2rem">
+                            〒151-0064 東京都渋谷区上原1-3-9 YYビル2階
+                        </p>
+                        <p class="paragraph">
+                            お問い合わせ
+                        </p>
+                        <p class="paragraph">
+                            運営会社
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="footer_copyright mt_sm text-center">
+                            Copyright © WellPedia All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- .................................Footer.................................. End-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+<script>
+        let hasVScroll = window.document.body.scrollHeight > document.documentElement.clientHeight;
+        // console.log(window.document.body.scrollHeight)
+        // console.log(document.documentElement.clientHeight)
+        console.log(hasVScroll)
+        if(!hasVScroll){
+            document.querySelector('footer').setAttribute('style', 'padding-top: 5rem; padding-bottom: 5rem')
+        }
+    </script>
+</body>
+
+</html>

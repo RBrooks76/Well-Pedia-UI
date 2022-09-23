@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理者_動画管理</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="./css/global_style/global_style.css">
+    <!-- global stylesEnd -->
+
+    <!-- Components -->
+    <link rel="stylesheet" href="./css/components/components.css">
+    <!-- ComponentsEnd -->
+    <!-- forms-->
+    <link rel="stylesheet" href="./css/forms/forms.css">
+    <!-- forms End-->
+</head>
+
+<body>
+    <!-- .................................Header............................. -->
+    <header>
+        <div class="section_container container_left_helper">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-xl navbar-light">
+                <!-- Container wrapper -->
+                <div class="container-fluid px-0">
+                    <!-- Toggle button -->
+                    <div class="d-flex d-xl-none py-4 pe-3 justify-content-between w-100">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand" href="#">
+                            <img class="logo_img" src="./img/logo.png" alt="img">
+                        </a>
+
+                        <button class="navbar-toggler" onclick="this.children[0].classList.toggle('fa-times')"
+                            type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars fa-2x"></i>
+
+                        </button>
+                    </div>
+
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand d-none d-xl-block mt-0 pt-0 mt-xl-0" href="#">
+                            <img class="logo_img" src="./img/logo.png" alt="img">
+                        </a>
+                        <!-- Left links -->
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar_list navbar_admin_login">
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">動画管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">コンテンツ管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">スタッフ管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">クライアント管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">ユーザー管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link   text-center btn_be_action lg_size font-weight-bold justify-content-center action_light h-100 d-flex align-items-center mx-auto"
+                                    href="#">
+                                    <svg style="margin-right: .7rem" xmlns="http://www.w3.org/2000/svg" width="20.571"
+                                        height="18" viewBox="0 0 20.571 18">
+                                        <path id="Icon_open-account-logout" data-name="Icon open-account-logout"
+                                            d="M7.714,0V2.571H18V15.429H7.714V18H20.571V0ZM5.143,5.143,0,9l5.143,3.857V10.286H15.429V7.714H5.143Z" />
+                                    </svg>
+
+                                    ログアウト</a>
+                            </li>
+                        </ul>
+                        <!-- Left links -->
+                    </div>
+                    <!-- Collapsible wrapper -->
+                </div>
+                <!-- Container wrapper -->
+            </nav>
+            <!-- Navbar -->
+        </div>
+    </header>
+    <!-- .................................Header.............................End -->
+
+    <!-- .................................Main.................................. -->
+    <main>
+
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="section_title section_title_sub title_sub_140 section_title_mb title_padding title_border_bottom" style="margin-bottom: 3.2rem">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="text_primary">
+                            動画管理
+                        </h3>
+                    </div>
+                </div>
+
+
+                <div class="section_body">
+                    <div class="form_container">
+                        <div class="row gx-3 gy-4 mb-3">
+                            <div class="col-12">
+                                <div class="d-flex flex-wrap flex-sm-nowrap align-items-center">
+                                    <div class="form-group w-100 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control w-100 h_40_sizer">
+                                    </div>
+                                    <button class="btn_be_action client_action_primary sm_size ms-sm-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17.999" height="18.002"
+                                            viewBox="0 0 17.999 18.002">
+                                            <path id="Icon_awesome-search" data-name="Icon awesome-search"
+                                                d="M17.754,15.564l-3.505-3.505a.843.843,0,0,0-.6-.246h-.573a7.309,7.309,0,1,0-1.266,1.266v.573a.843.843,0,0,0,.246.6l3.505,3.505a.84.84,0,0,0,1.192,0l.995-.995a.848.848,0,0,0,0-1.2ZM7.313,11.813a4.5,4.5,0,1,1,4.5-4.5A4.5,4.5,0,0,1,7.313,11.813Z"
+                                                fill="#fff"></path>
+                                        </svg> 検索
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+
+                <div class="section_title section_title_sub  title_padding title_border_bottom">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class=" text_primary me-3 text-nowrap">
+                            動画一覧
+                        </h3>
+
+                        <div class="pagination_wrapper mb-0">
+                            <ul class="pagination_list  list-unstyled d-flex flex-nowrap justify-content-end ">
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-angle-left    "></i>
+                                    </a>
+                                </li>
+                                <li style="background: var(--text-e2)">
+                                    <a href="#">1</a>
+                                </li>
+                                <li>
+                                    <a href="#">2</a>
+                                </li>
+                                <li>
+                                    <a href="#">3</a>
+                                </li>
+
+                                <li class="list_dots">
+                                    ...
+                                </li>
+                                <li>
+                                    <a href="#">10</a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-angle-right    "></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="content_list_wrapper">
+                    <ul class="list-unstyled content_list">
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="d-block d-lg-flex align-items-center flex-wrap justify-content-between">
+
+                                <div class="box me-3 mb-3 mb-lg-0">
+                                    <h6>
+                                        動画名テキスト動画名テキスト動画名テキスト動画名テキスト
+                                    </h6>
+                                    <div class="list_foot d-flex align-items-center">
+                                        <a href="#" class="text_df7">CATEGORY</a>
+                                    </div>
+
+                                </div>
+                                <div class="box">
+                                    <div class="content_right_helper mb-2 mb-sm-0" style="margin-right: 2.7rem">
+                                        - 編集する
+                                    </div>
+
+                                    <div class="content_right_helper mb-2 mb-sm-0">
+                                        ×削除する
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pagination_wrapper my_sizer mt-5">
+                    <ul class="pagination_list list-unstyled d-flex flex-wrap justify-content-end ">
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-angle-left    "></i>
+                            </a>
+                        </li>
+                        <li style="background: var(--text-e2)">
+                            <a href="#">1</a>
+                        </li>
+                        <li>
+                            <a href="#">2</a>
+                        </li>
+                        <li>
+                            <a href="#">3</a>
+                        </li>
+
+                        <li class="list_dots">
+                            ...
+                        </li>
+                        <li>
+                            <a href="#">10</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-angle-right    "></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <!-- .................................Main..................................End -->
+
+
+    <!-- .................................Footer.................................. -->
+    <footer>
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img class="light_logo logo_img" src="./img/light_logo.png" alt="">
+
+                        <p class="paragraph" style="margin-bottom: 3.2rem">
+                            〒151-0064 東京都渋谷区上原1-3-9 YYビル2階
+                        </p>
+                        <p class="paragraph">
+                            お問い合わせ
+                        </p>
+                        <p class="paragraph">
+                            運営会社
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="footer_copyright mt_sm text-center">
+                            Copyright © WellPedia All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- .................................Footer.................................. End-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+<script>
+        let hasVScroll = window.document.body.scrollHeight > document.documentElement.clientHeight;
+        // console.log(window.document.body.scrollHeight)
+        // console.log(document.documentElement.clientHeight)
+        console.log(hasVScroll)
+        if(!hasVScroll){
+            document.querySelector('footer').setAttribute('style', 'padding-top: 5rem; padding-bottom: 5rem')
+        }
+    </script>
+</body>
+
+</html>

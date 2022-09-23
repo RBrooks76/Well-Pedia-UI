@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理者_クライアント登録</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css" rel="stylesheet" />
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="./css/global_style/global_style.css">
+    <!-- global stylesEnd -->
+
+    <!-- Components -->
+    <link rel="stylesheet" href="./css/components/components.css">
+    <!-- ComponentsEnd -->
+    <!-- forms-->
+    <link rel="stylesheet" href="./css/forms/forms.css">
+    <!-- forms End-->
+</head>
+
+<body>
+    <!-- .................................Header............................. -->
+    <header>
+        <div class="section_container container_left_helper">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-xl navbar-light">
+                <!-- Container wrapper -->
+                <div class="container-fluid px-0">
+                    <!-- Toggle button -->
+                    <div class="d-flex d-xl-none py-4 pe-3 justify-content-between w-100">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand" href="#">
+                            <img class="logo_img" src="./img/logo.png" alt="img">
+                        </a>
+
+                        <button class="navbar-toggler" onclick="this.children[0].classList.toggle('fa-times')"
+                            type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarSupportedContent"
+                            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-bars fa-2x"></i>
+
+                        </button>
+                    </div>
+
+                    <!-- Collapsible wrapper -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Navbar brand -->
+                        <a class="navbar-brand d-none d-xl-block mt-0 pt-0 mt-xl-0" href="#">
+                            <img class="logo_img" src="./img/logo.png" alt="img">
+                        </a>
+                        <!-- Left links -->
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar_list navbar_admin_login">
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">動画管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">コンテンツ管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">スタッフ管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">クライアント管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link primary_link text-center" href="#">ユーザー管理</a>
+                            </li>
+                            <li class="nav-item nav_item_md">
+                                <a class="nav-link   text-center btn_be_action lg_size font-weight-bold justify-content-center action_light h-100 d-flex align-items-center mx-auto"
+                                    href="#">
+                                    <svg style="margin-right: .7rem" xmlns="http://www.w3.org/2000/svg" width="20.571"
+                                        height="18" viewBox="0 0 20.571 18">
+                                        <path id="Icon_open-account-logout" data-name="Icon open-account-logout"
+                                            d="M7.714,0V2.571H18V15.429H7.714V18H20.571V0ZM5.143,5.143,0,9l5.143,3.857V10.286H15.429V7.714H5.143Z" />
+                                    </svg>
+
+                                    ログアウト</a>
+                            </li>
+                        </ul>
+                        <!-- Left links -->
+                    </div>
+                    <!-- Collapsible wrapper -->
+                </div>
+                <!-- Container wrapper -->
+            </nav>
+            <!-- Navbar -->
+        </div>
+    </header>
+    <!-- .................................Header.............................End -->
+
+    <!-- .................................Main.................................. -->
+    <main>
+
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="section_title section_title_sub title_sub_140 section_title_mb title_padding title_border_bottom">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <h3 class="text_primary">
+                            コンテンツ管理
+                        </h3>
+                    </div>
+                </div>
+                <form action="" method="post" class="">
+                    <div class="form_container  table-responsive  pb-1 align_baseline">
+                        <table class="table form_table_td_sizer td_sizer_5 w_100 form_table ">
+                            <tbody>
+                                <tr>
+                                    <td class="font-weight-bold text-nowrap">
+                                        Concept画像
+                                    </td>
+                                    <td>
+                                        <div class="csv_content_wrapper">
+                                            <div class="csv_upload_wrapper d-flex align-items-center flex-wrap">
+                                                <h5 class="default_16 family_yugothib">
+                                                    イメージファイル
+                                                </h5>
+                                                <div class="uploader">
+                                                    <button class="csv_uploader_btn" type="button">
+                                                        <label for="csv_input_upload"
+                                                            class="w-100 h-100">ファイルを選択</label>
+                                                    </button>
+                                                    <input onchange="csvUploaderFunc(this)" class="d-none" type="file"
+                                                        name="csv_input_upload" accept=".csv" id="csv_input_upload">
+                                                </div>
+                                                <h5 class="csv_uploader_output">
+                                                    Sample.csv（ファイル名）
+                                                </h5>
+                                                <script>
+                                                    function csvUploaderFunc(val) {
+                                                        document.querySelector('.csv_uploader_output').innerHTML = val.value;
+                                                    }
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-bold text-nowrap">
+                                        Conceptテキスト
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <textarea class="form-control textarea_height"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="font-weight-bold text-nowrap">
+                                        Recommendation画像
+                                    </td>
+                                    <td>
+                                        <div class="csv_content_wrapper">
+                                            <div class="csv_upload_wrapper d-flex align-items-center flex-wrap">
+                                                <h5 class="default_16 family_yugothib">
+                                                    イメージファイル
+                                                </h5>
+                                                <div class="uploader">
+                                                    <button class="csv_uploader_btn" type="button">
+                                                        <label for="csv_input_upload"
+                                                            class="w-100 h-100">ファイルを選択</label>
+                                                    </button>
+                                                    <input onchange="csvUploaderFunc(this)" class="d-none" type="file"
+                                                        name="csv_input_upload" accept=".csv" id="csv_input_upload">
+                                                </div>
+                                                <h5 class="csv_uploader_output">
+                                                    Sample.csv（ファイル名）
+                                                </h5>
+                                                <script>
+                                                    function csvUploaderFunc(val) {
+                                                        document.querySelector('.csv_uploader_output').innerHTML = val.value;
+                                                    }
+                                                </script>
+                                            </div>
+                                        </div>
+
+
+                                    </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td class="font-weight-bold text-nowrap">
+                                        Recommendationテキスト
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <textarea class="form-control textarea_height"></textarea>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="form_control_action text-center">
+                        <button class="btn_dark btn_green btn_mt_4  content_mb_100 border-0">
+                            更新する
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <!-- .................................Main..................................End -->
+
+
+    <!-- .................................Footer.................................. -->
+    <footer>
+        <section>
+            <div class="section_container container_left_helper container_right_helper">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img class="light_logo logo_img" src="./img/light_logo.png" alt="">
+
+                        <p class="paragraph" style="margin-bottom: 3.2rem">
+                            〒151-0064 東京都渋谷区上原1-3-9 YYビル2階
+                        </p>
+                        <p class="paragraph">
+                            お問い合わせ
+                        </p>
+                        <p class="paragraph">
+                            運営会社
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12">
+                        <p class="footer_copyright mt_sm text-center">
+                            Copyright © WellPedia All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- .................................Footer.................................. End-->
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+<script>
+        let hasVScroll = window.document.body.scrollHeight > document.documentElement.clientHeight;
+        // console.log(window.document.body.scrollHeight)
+        // console.log(document.documentElement.clientHeight)
+        console.log(hasVScroll)
+        if(!hasVScroll){
+            document.querySelector('footer').setAttribute('style', 'padding-top: 5rem; padding-bottom: 5rem')
+        }
+    </script>
+</body>
+
+</html>
